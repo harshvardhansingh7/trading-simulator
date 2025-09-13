@@ -19,6 +19,7 @@
 
 ## Project Structure
 
+```bash
 src/
 └── main/
 ├── java/com/tradingsim/
@@ -53,8 +54,8 @@ src/
 │ └── PortfolioRepository.java
 └── resources/
 ├── application.properties (env placeholders)
-└── application-local.properties (ignored in git)
 
+```
 
 ---
 
@@ -68,12 +69,14 @@ cd trading-simulator
 
 2. Create `.env` file (ignored in git) with your secrets:
 
+```bash
 DB_USER=****
 DB_PASS=****
 JWT_SECRET=****
 STOCK_DETAILS_URL=****
 AI_ANALYSIS_URL=****
 LIVE_PRICE_URL=https://stockdetailsapi.onrender.com/api/price
+```
 
 
 
@@ -99,29 +102,31 @@ The server will start on `http://localhost:9090`
 - **Signup**  
   `POST /api/auth/signup`  
   Request Body (JSON):
+```bash
 {
 "username": "testuser",
 "email": "testuser@example.com",
 "password": "password123"
 }
+```
 
 
 - **Login**  
   `POST /api/auth/login`  
   Request Body (JSON):
+```bash
 {
 "username": "testuser",
 "password": "password123"
 }
-
-
+```
+```bash
 Response:
 {
 "token": "jwt_token_here"
 }
+```
 
-yaml
-Copy code
 
 ---
 
@@ -170,6 +175,7 @@ Copy code
 - **View Portfolio**  
   `GET /api/portfolio`  
   Headers: `Authorization: Bearer <jwt_token>`  
+```bash
   Response:
 [
 {
@@ -181,7 +187,7 @@ Copy code
 "pnl": 200.0
 }
 ]
-
+```
 
 
 ---
