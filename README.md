@@ -63,9 +63,10 @@ src/
 
 1. Clone the repo:
 
+```bash
 git clone https://github.com/<your-username>/trading-simulator.git
 cd trading-simulator
-
+```
 
 2. Create `.env` file (ignored in git) with your secrets:
 
@@ -81,15 +82,15 @@ LIVE_PRICE_URL=https://stockdetailsapi.onrender.com/api/price
 
 
 3. Make sure MySQL is running and create database:
-
+```bash
 CREATE DATABASE tradingdb;
-
+```
 
 4. Build and run the app:
-
+```bash
 mvn clean install
 mvn spring-boot:run
-
+```
 
 The server will start on `http://localhost:9090`
 
@@ -101,8 +102,9 @@ The server will start on `http://localhost:9090`
 
 - **Signup**  
   `POST /api/auth/signup`  
-  Request Body (JSON):
 ```bash
+  Request Body (JSON):
+
 {
 "username": "testuser",
 "email": "testuser@example.com",
@@ -113,8 +115,9 @@ The server will start on `http://localhost:9090`
 
 - **Login**  
   `POST /api/auth/login`  
-  Request Body (JSON):
 ```bash
+  Request Body (JSON):
+
 {
 "username": "testuser",
 "password": "password123"
